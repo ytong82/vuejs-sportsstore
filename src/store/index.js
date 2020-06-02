@@ -13,7 +13,7 @@ export default new Vuex.Store({
   strict: true,
   state: {
     products: [],
-    categoresData: [],
+    categoriesData: [],
     productsTotal: 0,
     currentPage: 1,
     pageSize: 4,
@@ -28,7 +28,7 @@ export default new Vuex.Store({
       return state.products.slice(index, index + state.pageSize);
     },
     pageCount: state => Math.ceil(state.productsTotal / state.pageSize),
-    categories: state => ["All", ...state.categoresData]
+    categories: state => ["All", ...state.categoriesData]
   },
   mutations: {
     setCurrentPage(state, page) {
@@ -44,7 +44,7 @@ export default new Vuex.Store({
     },
     setData(state, data) {
       state.products = data.pdata;
-      state.prouctsTotal = data.pdata.length;
+      state.productsTotal = data.pdata.length;
       state.categoriesData = data.cdata.sort();
     }
   },
