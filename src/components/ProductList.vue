@@ -24,7 +24,7 @@ import PageControls from "./PageControls";
 export default {
   components: { PageControls },
   computed: {
-    ...mapGetters({ products: "processedProducts" })
+    ...mapGetters({ products: "productsFilteredByCategory" })
   },
   filters: {
     currency(value) {
