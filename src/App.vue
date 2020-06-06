@@ -8,10 +8,12 @@ import { mapActions } from "vuex";
 export default {
   name: 'App',
   methods: {
-    ...mapActions(["getData"])
+    ...mapActions(["getData"]),
+    initializeCart: "cart/initializeCart"
   },
   created() {
     this.getData();
+    this.initializeCart(this.$store);
   }
 }
 </script>
