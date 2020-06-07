@@ -42,7 +42,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(["setCurrentPage"]),
+    ...mapMutations(["setCurrentPage", "setPageSize"]),
     changePageSize($event) {
       this.setPageSize(Number($event.target.value));
     }
