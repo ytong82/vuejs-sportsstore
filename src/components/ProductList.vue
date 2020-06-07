@@ -32,7 +32,7 @@ import PageControls from "./PageControls";
 export default {
   components: { PageControls },
   computed: {
-    ...mapGetters({ products: "productsFilteredByCategory" })
+    ...mapGetters({ products: "processedProducts" })
   },
   methods: {
     ...mapMutations({ addProduct: "cart/addProduct" }),
