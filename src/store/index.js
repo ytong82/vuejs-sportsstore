@@ -26,7 +26,7 @@ export default new Vuex.Store({
     pages: [],
     serverPageCount: 0,
     searchTerm: "",
-    showSearch: true
+    showSearch: false
   },
   getters: {
     processedProducts: (state) => {
